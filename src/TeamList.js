@@ -3,9 +3,12 @@ import data from "./CollegeBasketballTeam.json"; // Importing JSON data
 import TeamCard from "./TeamCard"; // Importing TeamCard component
 
 const TeamList = () => {
+  // Access the 'teams' property to get the array of team objects
+  const teamData = data.teams;
+
   return (
     <div className="team-list">
-      {data.map((team) => (
+      {teamData.map((team) => (
         <TeamCard
           key={team.tid}
           school={team.school}
